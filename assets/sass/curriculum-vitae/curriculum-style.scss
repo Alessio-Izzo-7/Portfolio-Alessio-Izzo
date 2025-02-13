@@ -1,0 +1,386 @@
+@import '../../sass/utilities';
+
+/* Reset */ 
+body, html{ font-family: 'Rubik', Arial, Helvetica, sans-serif; line-height: 1; font-size: 16px; box-sizing: border-box;margin: 0;padding: 0;}*,*:before,*:after{ box-sizing: border-box; }h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0 0 1rem 0;padding: 0;}ol,ul{padding-left: 20px;line-height: 1.5;}img{height: auto;}h1{font-size: 4rem;} h2{font-size: 3rem;} h3{font-size: 2rem;} h4{font-size: 1rem;} h5{font-size: 0.8rem;} h6{font-size: 0.6rem;}a{text-decoration:none}
+
+*{
+  font-family: "Lato";
+  color: white;
+}
+p{font-size: 18px;}
+
+
+
+body{
+  background-image: url(../../img/sfondo-curriculum-Alessio-Izzo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* navbar */
+.header{
+  color: $third-color;
+  background-color:  rgba(0, 0, 0, 1);
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    
+    .header__link{
+    color: #fff;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+
+      a{
+        color: #fff;
+        text-decoration: none;
+
+      }
+    }
+
+    .header__link:visited{
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .header__logo{
+    float: left;
+    font-size: 25px;
+    padding: 10px 20px;
+  }
+
+  .header__menu{
+    clear: both;
+    max-height:0;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .menu__icon{
+  padding: 28px 20px;
+  position: relative;
+  float: right;
+
+    .nav__icon{
+      background-color: $third-color;
+      display: block;
+      width: 18px;
+      height: 2px;
+      position: relative;
+      }
+      .nav__icon::before{
+        background-color: $third-color;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: all .2s ease-out;
+        position: absolute;
+        top: 5px;
+       }
+
+       .nav__icon::after{
+        background-color: $third-color;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: all .2s ease-out;
+        position: absolute;
+        top: -5px;
+      }
+}
+
+.menu__btn{
+  display: none;
+}
+
+.menu__btn:checked ~ .header__menu{
+  max-height: 300px;
+}
+
+.menu__btn:checked ~ .menu__icon .nav__icon{
+  background-color: transparent; 
+}
+
+.menu__btn:checked ~ .menu__icon .nav__icon::before{
+transform: rotate(-45deg);
+top: 0;
+}
+
+.menu__btn:checked ~ .menu__icon .nav__icon::after{
+  transform: rotate(45deg);
+  top: 0;
+}
+
+}
+
+/* navbar hover */
+.header__link:hover{
+  background-color: $primary-color;
+}
+
+/* Name curriculum */
+.name{
+    margin-top: 5%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2;
+    margin: auto 5%;
+    padding-top: 80px;
+
+    .name__img{
+        width: 300px;
+        height: 300px;
+        grid-column: 1;
+        grid-row: 1;
+        background-color: red;
+        border-radius: 50%;
+        background-image: url(../../img/Chi-Sono-Alessio-Izzo.jpg);
+        background-position: center;
+        background-size: cover;
+        margin: auto;
+        
+        
+
+    }
+
+    .name__text{
+        grid-column: 1;
+        grid-row: 2;
+        place-items: center;
+        margin-bottom: 32px;
+        
+        h1{
+            font-size: 3rem;
+            margin-top: 16px;
+            margin-bottom: 5px;
+        }
+
+        h3{
+            font-size: 1.5rem;
+            margin-top: 0px;
+            margin-bottom: 8px;
+        }
+
+        hr{
+            display: none;
+        }
+
+        #phone{
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        
+        
+    }
+}
+
+/* information curriculum */
+.information{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6 50vh);
+  padding: 5%;
+
+  .abaut{
+    grid-column: 1;
+    grid-row: 1;
+    border-right: 0;
+    border-bottom: 2px solid $third-color;
+    padding-left: 0;
+  }
+
+  .work-experience{
+    grid-column: 1;
+    grid-row: 2/4;
+    border-bottom: 2px solid $third-color;
+  }
+
+  .education{
+    grid-column: 1;
+    grid-row: 4;
+    border-right: 0;
+    border-bottom: 2px solid $third-color;
+
+    h4{
+      margin-bottom: 16px;
+    }
+  }
+
+  .skills{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    grid-column: 1;
+    grid-row: 5;
+    border-bottom: 2px solid $third-color;
+
+    h4{
+      display: inline-block;
+      border: 1.5px solid $third-color;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 2px;
+    }
+  }
+
+  .language{
+    grid-column: 1;
+    grid-row: 6;
+    padding: 10px;
+  }
+
+  h3, h4, h5{
+    margin: 0;
+  }
+
+  .information-icon{
+    background-color: $primary-color;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  
+  
+    .bi{
+      font-size: 33px;
+    }
+  }
+}
+
+/* responsive */
+@media (min-width: 768px){
+
+  .header{
+    background-color:  rgba(0, 0, 0, 0.9);
+    .header__logo{
+      display: none;
+    }
+     li{
+      float: left;
+      
+      a{
+        margin: 0;
+        padding:0px;
+      }
+     }
+     .header__menu{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      clear: none;
+      max-height: 300px
+     }
+
+     .menu__icon{
+      display: none;
+
+     }
+  }
+
+    .name{
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 1;
+        padding: 0;
+    
+
+    
+        .name__text{
+            grid-column: 2;
+            grid-row: 1;
+            place-items: unset;
+            margin: auto 0px;
+
+            h1{
+              font-size: 4rem;
+            }
+
+            h3{
+              font-size: 2rem;
+            }
+            
+          hr{
+            display: block;
+          }
+
+        }
+    }
+
+    .information{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3 1fr);
+    
+      .abaut{
+        grid-column: 1;
+        grid-row: 1;
+        border-right: 2px solid $third-color;
+        border-bottom: 2px solid $third-color;
+        padding-right: 25px;
+        place-content: center;
+      
+      }
+    
+      .work-experience{
+        grid-column: 2;
+        grid-row: 1/3;
+        border-bottom: 2px solid $third-color;
+        padding-left: 25px;
+
+        p{
+          margin-bottom: 20px;
+        }
+      }
+    
+      .education{
+        grid-column: 1;
+        grid-row: 2;
+        border-right: 2px solid $third-color;
+        border-bottom: 2px solid $third-color;
+        padding-right: 25px;
+        place-content: center;
+      }
+    
+      .skills{
+        grid-column: 1;
+        grid-row: 3;
+        border-right: 2px solid $third-color;
+        border-bottom: 0px;
+        padding-right: 25px;
+        place-content: center;
+      }
+    
+      .language{
+        grid-column: 2;
+        grid-row: 3;
+        padding-left: 25px;
+        place-content: center;
+
+        h4{
+          font-size: 23px;
+        }
+      }
+    }
+}
+
+@media (min-width: 1440px){
+h1, h2, h3, h4, h5, h6, p{
+  font-size: 25px;}
+  h1{font-size: 4rem;} h2{font-size: 3rem;} h3{font-size: 2rem;} h4{font-size: 1.2rem;} h5{font-size: 0.8rem;} h6{font-size: 0.6rem;}
+
+}
