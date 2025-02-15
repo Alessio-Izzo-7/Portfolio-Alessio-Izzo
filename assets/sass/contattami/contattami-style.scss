@@ -50,6 +50,7 @@ body{
   }
 
   .header__logo{
+    display: none;
     float: left;
     font-size: 25px;
     padding: 10px 20px;
@@ -212,7 +213,6 @@ top: 0;
 @media (min-width: 768px){
 
   .header{
-
      li{
       float: left;
       

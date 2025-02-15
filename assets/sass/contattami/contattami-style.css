@@ -194,6 +194,7 @@ body {
   text-decoration: none;
 }
 .header .header__logo {
+  display: none;
   float: left;
   font-size: 25px;
   padding: 10px 20px;

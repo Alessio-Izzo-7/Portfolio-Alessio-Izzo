@@ -193,6 +193,7 @@ body {
   text-decoration: none;
 }
 .header .header__logo {
+  display: none;
   float: left;
   font-size: 25px;
   padding: 10px 20px;
@@ -266,6 +267,7 @@ body {
   grid-template-rows: 2;
   margin: auto 5%;
   padding-top: 80px;
+  margin-bottom: 80px;
 }
 .name .name__img {
   width: 300px;
@@ -283,7 +285,6 @@ body {
   grid-column: 1;
   grid-row: 2;
   place-items: center;
-  margin-bottom: 32px;
 }
 .name .name__text h1 {
   font-size: 3rem;
@@ -373,9 +374,6 @@ body {
   .header {
     background-color: rgba(0, 0, 0, 0.9);
   }
-  .header .header__logo {
-    display: none;
-  }
   .header li {
     float: left;
   }
@@ -398,6 +396,7 @@ body {
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 1;
     padding: 0;
+    margin: 0;
   }
   .name .name__text {
     grid-column: 2;
