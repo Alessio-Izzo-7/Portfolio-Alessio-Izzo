@@ -1,4 +1,3 @@
-Portfolio Alessio Izzo
 Questo è il mio primo sito web, progettato per rappresentare il mio lavoro come fotografo e web developer. Per realizzarlo, ho utilizzato HTML e CSS, scritti tramite SASS, creando un layout semplice ma accattivante, con l’obiettivo di rendere la navigazione intuitiva e stimolante per l'utente.
 
 Per gestire il layout, ho scelto di impiegare classi predefinite, che mi hanno permesso di organizzare facilmente gli elementi senza dover applicare manualmente gli stili a ciascun componente. Questo approccio ha semplificato il processo di sviluppo, risparmiando tempo e rendendo il codice più ordinato e facile da mantenere. Grazie a questa struttura modulare, il sito è risultato anche completamente responsive, adattandosi perfettamente a dispositivi di diverse dimensioni e risoluzioni, garantendo un'esperienza di navigazione fluida su desktop, tablet e smartphone.
@@ -9,7 +8,6 @@ Per ottimizzare la gestione e la flessibilità del design, ho scelto di implemen
 
 
 Struttura delle Directory:
-La struttura delle directory è stata progettata per essere chiara, organizzata e facilmente gestibile. Ogni cartella ha uno scopo preciso che aiuta a mantenere il progetto ordinato. Di seguito trovi una panoramica dettagliata delle cartelle principali e dei loro contenuti:
 ---
 Cartella Principale
 -Contiene i file HTML di tutte le pagine del sito.
